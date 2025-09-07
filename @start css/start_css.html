@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@starting-style</title>
+    <style>
+        *{
+            list-style: none;
+        }
+      .menu > ul{
+        display: flex;
+        gap: 50px;
+        list-style: none;
+      }
+      .menu  ul li a{
+        text-decoration: none;
+      }
+      .menu > ul > li {
+        position: relative;
+      }
+      
+      .dropdown li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+    .dropdown {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    box-shadow: 0 0 5px #333;
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+    transition: 1s;
+    width: 190px;
+    transform-origin: top;
+
+    @starting-style{
+        /* width: 0px; */
+        transform: scaleY(0);
+    }
+}
+.menu ul li:hover .dropdown{
+    display: block;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    float: right;
+    background-color: red;
+    transition: 1s;
+
+    @starting-style{
+        margin-top: -100px;
+        background-color: green;
+    }
+
+}
+
+
+    </style>
+</head>
+
+
+<body>
+ 
+<h3>Q. @starting-style{ property }</h3> <br><br><br>
+
+    <div class="menu">
+       <ul>
+        <li><a href="#">Home</a>
+            <ul class="dropdown">
+                <li> <a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Course</a></li>
+                <li> <a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Course</a></li>
+            </ul>
+        </li>
+        <li> <a href="#">About</a>
+            <ul class="dropdown">
+                <li> <a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Course</a></li>
+                <li> <a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Course</a></li>
+            </ul></li>
+        <li><a href="#">Contact</a>
+            <ul class="dropdown">
+                <li> <a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Course</a></li>
+                <li> <a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Course</a></li>
+            </ul></li>
+        <li><a href="#">Course</a></li>
+       </ul>
+       </div>
+
+
+       <div class="box"></div>
+</body>
+</html>
